@@ -15,11 +15,6 @@ void count(ull * second)
 while(1) *second+=1;
 }
 
-void test(void)
-{
-printf("WORK!\n");
-}
-
 int main(int arg,char**argd)
 {
 if(arg < 3) return error("./programm threads seconds"); 
