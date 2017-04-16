@@ -3,7 +3,8 @@
 #include<stdlib.h>
 #include <unistd.h>
 typedef unsigned long long ull;
-
+typedef enum {false,true} bool;
+bool Worked=false;
 int error(char*msg)
 {
 printf("ERROR: %s\n",msg);
@@ -12,6 +13,7 @@ exit(-1);
 
 void count(ull ** second)
 {
+while(!Worked);
 while(1) *second+=1;
 }
 
@@ -24,7 +26,7 @@ ull threads=atoi(argd[1]);
 ull * counter = (ull*)malloc(sizeof(ull*) * threads );
 for(ull i = threads; i--;)
  pthread_create(&tmp, NULL, count, &counter[i]);
-
+Worked=true;
 sleep( atoi(argd[2]) );
 
 for(ull i = threads; i--;)
