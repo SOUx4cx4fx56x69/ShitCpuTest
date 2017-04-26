@@ -22,7 +22,7 @@ exit(-1);
 void count(ull ** second)
 {
 sched_setaffinity(0, sizeof(cpu), &cpu); // set to this pid, cpusetsize, addr cpu
-cpu++;//to  cpu ++
+cpu++;//to  cpu(addr) ++
 while(!Worked);
 while(1) *second+=1;
 }
