@@ -24,7 +24,11 @@ void count(ull ** second)
 sched_setaffinity(0, sizeof(cpu), &cpu); // set to this pid, cpusetsize, addr cpu
 cpu++;//to  cpu(addr) ++
 while(!Worked);
-while(1) *second+=1;
+while(1)
+{
+ *second+=1;
+ if(*second==0) puts("Value Exceeded the max now 0");
+}
 }
 
 
