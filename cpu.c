@@ -48,6 +48,6 @@ sleep( atoi(argd[1]) );
 
 for(ull i = cpus; i--;)
  printf("Thread(%d): %u of %i second\n", i , counter[i] , atoi(argd[1]));
-
+CPU_ZERO(&cpu);
 return 1;
 }
